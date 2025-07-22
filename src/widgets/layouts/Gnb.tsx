@@ -1,6 +1,8 @@
+"use client";
+
 // Gnb.jsx
 import React, { useContext, useEffect, useState } from "react";
-import { CommonContext } from "./commonContext";
+import { CommonContext } from "@/app/commonContext";
 
 const BRAND_LIST = {
   ORGA: "orga",

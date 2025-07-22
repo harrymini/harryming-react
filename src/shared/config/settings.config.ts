@@ -19,16 +19,18 @@ interface Settings {
 	};
 }
 export const APP_SETTINGS: Settings = {
-	brand_list: {
-		ORGA: "orga",
-		PULMUONE: "pulmuone",
-		GREENJUICE: "greenjuice",
-	},
-	mallName: "PulmuoneMall",
-	userSession: "",
-	layoutOptions: {
-		useHeader: true,
-		useFooter: true,
+        title: "Pulmuone Mall App",
+        brand_list: {
+                ORGA: "orga",
+                PULMUONE: "pulmuone",
+                GREENJUICE: "greenjuice",
+        },
+        mallName: "PulmuoneMall",
+        userSession: "",
+        layout: "default",
+        layoutOptions: {
+                useHeader: true,
+                useFooter: true,
 		title: "풀무원#",
 		headerType: "sub",
 		brand: "MALL_DIV.PULMUONE",
