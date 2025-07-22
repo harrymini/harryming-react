@@ -1,9 +1,16 @@
+"use client";
+
 import React, { createContext, useReducer, useEffect, useCallback } from "react";
 import axios from "axios";
 
 // --- 필요한 상수들 (코드, 경로 등)
-const APP_CONFIG = window.$APP_CONFIG || {}; // 혹은 import ...
-const CODES_CONFIG = window.$CODES_CONFIG || {}; // 혹은 import ...
+const APP_CONFIG = (window as any).$APP_CONFIG || {}; // 혹은 import ...
+const CODES_CONFIG = (window as any).$CODES_CONFIG || {}; // 혹은 import ...
+
+// 광고/네비게이션용 디스플레이 아이디 매핑
+const DISPLAY_ID: Record<string, string[]> = {
+  greenjuice: ["GJ", "New", "Event", "Guide"],
+};
 
 // --- 초기 상태
 const initialState = {
