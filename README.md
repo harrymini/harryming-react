@@ -32,8 +32,18 @@ root. The following templates are included:
 - `.env.prod`
 
 Each file defines values such as `NEXT_PUBLIC_ENVIRONMENT` and
-`NEXT_PUBLIC_BASE_PATH`. Adjust these values to match the settings for your
-deployment target.
+`NEXT_PUBLIC_BASE_PATH` along with `NEXT_PUBLIC_API_HOST` and
+`NEXT_PUBLIC_ASSETS_HOST`. Adjust these values to match the settings for your
+deployment target. The API and asset hosts mirror the proxy configuration from
+a previous Vue project:
+
+| Environment | `NEXT_PUBLIC_API_HOST` | `NEXT_PUBLIC_ASSETS_HOST` |
+|-------------|-----------------------|---------------------------|
+| local       | `http://localhost:8180` | `https://sqa.pulmuone.app/` |
+| dev         | `https://dev0shop.pulmuone.online` | `https://sqa.pulmuone.app/` |
+| qa          | `https://qashop.pulmuone.online` | `https://sqa.pulmuone.app/` |
+| canary      | `https://canshop.pulmuone.online` | `https://s.pulmuone.app/` |
+| prod        | `https://shop.pulmuone.co.kr` | `https://s.pulmuone.app/` |
 
 ## Learn More
 
