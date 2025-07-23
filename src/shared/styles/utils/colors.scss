@@ -1,0 +1,113 @@
+@use "../common/variable.scss" as *;
+
+// #endregion
+$colors: (
+	black: $black,
+	white: $white,
+	// white-light : $white-light,
+	// white-pressed : $white-pressed,
+	// red : $red,
+	// red-light : $red-light,
+	gray-80: $gray-80,
+	// gray-80-pressed : $gray-80-pressed,
+	gray-68: $gray-68,
+	gray-64: $gray-64,
+	gray-48: $gray-48,
+	gray-32: $gray-32,
+	gray-24: $gray-24,
+	gray-16: $gray-16,
+	gray-12: $gray-12,
+	gray-8: $gray-8,
+	gray-4: $gray-4,
+	gray-3: $gray-3,
+	gray-2: $gray-2,
+	// soldout-color : $soldout-color,
+	// facebook-primary : $facebook-primary,
+	// naver-primary : $naver-primary,
+	// kakao-primary : $kakao-primary,
+	// dragon-primary : $dragon-primary,
+	// dragon-gradient-start : $dragon-gradient-start,
+	// dragon-gradient-end : $dragon-gradient-end,
+	// dragon-gradient : $dragon-gradient,
+	primary: $primary,
+	// primary-hover : $primary-hover,
+	// primary-pressed : $primary-pressed,
+	// primary-blur : $primary-blur,
+	// primary-dark : $primary-dark,
+	primary-light: $primary-light,
+	// secondary-dark : $secondary-dark,
+	// secondary-pure : $secondary-pure,
+	// secondary-ligh : $secondary-ligh,
+	point: $point,
+	// point-pure : $point-pure,
+	// point-dark : $point-dark,
+	// point-light : $point-light,
+	// gradient-start : $gradient-start,
+	// gradient-end : $gradient-end,
+	// background-bubbles : $background-bubbles,
+	// background-bubbles-deep : $background-bubbles-deep,
+	// orga-primary : $orga-primary,
+	// orga-primary-blur : $orga-primary-blur,
+	// orga-secondary-dark : $orga-secondary-dark,
+	// orga-secondary-pure : $orga-secondary-pure,
+	// orga-secondary-ligh : $orga-secondary-ligh,
+	// orga-secondary-blur : $orga-secondary-blur,
+	// orga-point : $orga-point,
+	// orga-gradient-start : $orga-gradient-start,
+	// orga-gradient-end : $orga-gradient-end,
+	// orga-secondary-pure-brown : $orga-secondary-pure-brown,
+	// orga-secondary-pure-dark-brown : $orga-secondary-pure-dark-brown,
+	// orga-pure-light : $orga-pure-light,
+	// orga-yellow : $orga-yellow,
+	// orga-brown : $orga-brown,
+	// orga-light-grey : $orga-light-grey,
+	// orga-shop-badge-color : $orga-shop-badge-color,
+	// eatslim-primary : $eatslim-primary,
+	// eatslim-secondary-dark : $eatslim-secondary-dark,
+	// eatslim-secondary-pure : $eatslim-secondary-pure,
+	// eatslim-secondary-ligh : $eatslim-secondary-ligh,
+	// eatslim-point : $eatslim-point,
+	// eatslim-gradient-start : $eatslim-gradient-start,
+	// eatslim-gradient-end : $eatslim-gradient-end,
+	// babymeal-primary : $babymeal-primary,
+	// babymeal-secondary-dark : $babymeal-secondary-dark,
+	// babymeal-secondary-pure : $babymeal-secondary-pure,
+	// babymeal-secondary-ligh : $babymeal-secondary-ligh,
+	// babymeal-point : $babymeal-point,
+	// babymeal-gradient-start : $babymeal-gradient-start,
+	// babymeal-gradient-end : $babymeal-gradient-end,
+	primary-00: $primary-00,
+	primary-f4: $primary-f4,
+	neutral-00: $neutral-00,
+	neutral-55: $neutral-55,
+	neutral-9e: $neutral-9e,
+	neutral-bd: $neutral-bd,
+	neutral-e0: $neutral-e0,
+	neutral-ee: $neutral-ee,
+	neutral-f5: $neutral-f5,
+	icon-51: $icon-51,
+	icon-60: $icon-60,
+	icon-ff: $icon-ff,
+	orga-65: $orga-65,
+	orga-9d: $orga-9d,
+	orga-ff: $orga-ff,
+	neutral-9d: $neutral-9d,
+	gradient: $gradient,
+);
+
+@each $name, $color in $colors {
+	// 텍스트 색상 클래스 (.fc-)
+	.fc-#{"#{$name}"} {
+		color: $color !important;
+	}
+
+	// 배경색 클래스 (.bg-)
+	.bg-#{"#{$name}"} {
+		background-color: $color !important;
+	}
+
+	// 테두리 색상 클래스 (.bd-)
+	.bd-#{"#{$name}"} {
+		border-color: $color !important;
+	}
+}

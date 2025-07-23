@@ -1,0 +1,202 @@
+// #region common
+$width: 360px;
+$images: "/assets/pc/images";
+$anyimages: "/assets/any/images";
+// color
+$black: #000;
+$white: #fff;
+$white-light: rgba(255, 255, 255, 0.12);
+$white-pressed: rgba(0, 0, 0, 0.02);
+$red: #f00;
+$red-light: #ef5350;
+$gray-80: #333;
+$gray-80-pressed: rgba(0, 0, 0, 0.12);
+$gray-68: #525252;
+$gray-64: #5c5c5c;
+$gray-48: #858585;
+$gray-32: #adadad;
+$gray-24: #c2c2c2;
+$gray-16: #d6d6d6;
+$gray-12: #e0e0e0;
+$gray-8: #ebebeb;
+$gray-4: #f5f5f5;
+$gray-3: #f7f7f7;
+$gray-2: #fafafa;
+
+// soldout background color
+$soldout-color: rgba(0, 0, 0, 0.64);
+
+// facebook color
+$facebook-primary: #2f57a3;
+
+// naver color
+$naver-primary: #1ec800;
+
+// kakao color
+$kakao-primary: #fee500;
+
+// #endregion
+
+//region dragon
+$dragon-primary: #00a41b;
+$dragon-gradient-start: #1aa975;
+$dragon-gradient-end: #80d67a;
+$dragon-gradient: linear-gradient(93deg, #{$dragon-gradient-start} 0%, #{$dragon-gradient-end} 100%);
+
+// #endregion
+
+// #region Pulmuone
+$primary: #80c342;
+$primary-hover: #75b33c;
+$primary-pressed: rgba(0, 0, 0, 0.08);
+$primary-blur: #80c342;
+$primary-dark: #7fc241;
+$primary-light: #f4fce2;
+$secondary-dark: #080808;
+$secondary-pure: #009333;
+$secondary-ligh: #f5f8f6;
+$point: #ff732a;
+$point-pure: #f49433;
+$point-dark: #004f18;
+$point-light: #ffeee5;
+$gradient-start: #7bcc12;
+$gradient-end: #74c346;
+$background-bubbles: #ebf1ed;
+$background-bubbles-deep: #dce2dd;
+
+// #endregion
+
+// #region Orga
+
+$orga-primary: #635447;
+$orga-primary-blur: #635447;
+$orga-secondary-dark: #514133;
+$orga-secondary-pure: #aa8153;
+$orga-secondary-ligh: #f8f8f7;
+$orga-secondary-blur: #cbb999;
+$orga-point: #ff732a;
+$orga-gradient-start: #5c4a3a;
+$orga-gradient-end: #635549;
+$orga-secondary-pure-brown: #846b5b;
+$orga-secondary-pure-dark-brown: #5f4e40;
+$orga-pure-light: #ddccba;
+$orga-yellow: #fff07e;
+$orga-brown: #775541;
+$orga-light-grey: #f2ede8;
+$orga-shop-badge-color: #de9645;
+
+// #endregion
+
+// #region Greenjuice
+$green-primary: #18a56f;
+// $green-primary-blur: #635447;
+// $green-secondary-dark: #514133;
+// $green-secondary-pure: #aa8153;
+// $green-secondary-ligh: #f8f8f7;
+// $green-secondary-blur: #cbb999;
+// $green-point: #ff732a;
+// $green-gradient-start: #5c4a3a;
+// $green-gradient-end: #635549;
+// $green-secondary-pure-brown: #846b5b;
+// $green-secondary-pure-dark-brown: #5f4e40;
+// $green-pure-light: #ddccba;
+// $green-yellow: #fff07e;
+// $green-brown: #775541;
+// $green-light-grey: #f2ede8;
+// $green-shop-badge-color: #de9645;
+// #endregion
+
+// #region Eatslim
+
+$eatslim-primary: #70b5d9;
+$eatslim-primary-blur: #70b5d9;
+$eatslim-secondary-dark: #415561;
+$eatslim-secondary-pure: #489fcc;
+$eatslim-secondary-ligh: #f8f8f9;
+$eatslim-point: #ff732a;
+$eatslim-gradient-start: #489fcc;
+$eatslim-gradient-end: #50a8d5;
+
+// #endregion
+
+// #region Pulmuone
+
+$babymeal-primary: #e6843e;
+$babymeal-primary-blur: #e6843e;
+$babymeal-secondary-dark: #000;
+$babymeal-secondary-pure: #000;
+$babymeal-secondary-ligh: #000;
+$babymeal-point: #ff732a;
+$babymeal-gradient-start: #e6843e;
+$babymeal-gradient-end: #ee9556;
+
+// #endregion
+
+// #region font
+$defaultFont: "맑은 고딕", "malgun gothic", "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", "Microsoft NeoGothic", "Droid sans", sans-serif;
+$preFamily: "Pretendard", $defaultFont;
+$latoFamily: "Lato", $preFamily;
+$pretendard: $preFamily;
+$lato: $latoFamily;
+$lohas: "PulmuoneLOHAS", $preFamily;
+$enLohas: "Pulmuone", $preFamily;
+$nanum: "NanumSquareRound", $latoFamily;
+$dream: "S-CoreDream", $preFamily;
+// #endregion
+
+// #region images
+$images: "/assets/mobile/images";
+$anyimages: "/assets/any/images";
+// #endregion
+
+// #retion icons
+// dropdown
+$icon-drop-down-img: "#{$images}/common/down-line-20.svg";
+$icon-drop-down-img-disabled: "#{$images}/common/down-line-20-disabled.svg";
+$icon-drop-down-up-img: "#{$images}/common/up-line-20.svg";
+$icon-drop-down-up-img-disabled: "#{$images}/common/up-line-20-disabled.svg";
+$icon-large-drop-down-img: "#{$images}/common/down-line-24.svg";
+$icon-large-drop-down-img-disabled: "#{$images}/common/down-line-24-disabled.svg";
+$icon-large-drop-down-up-img: "#{$images}/common/up-line-24.svg";
+$icon-large-drop-down-up-img-disabled: "#{$images}/common/up-line-24-disabled.svg";
+// #endregion
+
+$spinner-icon: "#{$images}/common/spinner.gif";
+
+// Common Color Guideline (2024)
+$black: #000000;
+$white: #ffffff;
+
+// primary
+$primary-00: #00a41b;
+$primary-f4: #f44336;
+
+// neutral
+$neutral-00: #000000;
+$neutral-55: #555555;
+$neutral-9e: #9e9e9e;
+$neutral-bd: #bdbdbd;
+$neutral-e0: #e0e0e0;
+$neutral-ee: #eeeeee;
+$neutral-f5: #f5f5f5;
+
+// icon, label
+$icon-51: #51b811;
+$icon-60: #60c81a;
+$icon-ff: #ffb1b1;
+
+// orga
+$orga-65: #654327;
+$orga-9d: #9daa4c;
+$orga-ff: #fff9ef;
+
+// greenjuice
+$greenjuice-ff: #fff200;
+
+// main page
+$neutral-9d: #9d9d9d;
+
+// mypage
+$gradient-start: #1aa975;
+$gradient-end: #80d67a;
+$gradient: linear-gradient(93deg, #{$gradient-start} 0%, #{$gradient-end} 100%);

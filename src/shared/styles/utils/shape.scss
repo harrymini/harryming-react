@@ -1,0 +1,504 @@
+@use "../common/variable.scss" as *;
+@for $i from 0 through 50 {
+	$i-px: $i * 4px;
+	$ih-px: ($i * 4) - 2px;
+
+	// 여백 설정 4배수 -2px
+	.ma-#{$i} {
+		margin: $i-px !important;
+	}
+
+	.pa-#{$i} {
+		padding: $i-px !important;
+	}
+
+	.mt-#{$i} {
+		margin-top: $i-px !important;
+	}
+
+	.mr-#{$i} {
+		margin-right: $i-px !important;
+	}
+
+	.mb-#{$i} {
+		margin-bottom: $i-px !important;
+	}
+
+	.ml-#{$i} {
+		margin-left: $i-px !important;
+	}
+
+	.pt-#{$i} {
+		padding-top: $i-px !important;
+	}
+
+	.pr-#{$i} {
+		padding-right: $i-px !important;
+	}
+
+	.pb-#{$i} {
+		padding-bottom: $i-px !important;
+	}
+
+	.pl-#{$i} {
+		padding-left: $i-px !important;
+	}
+
+	.px-#{$i} {
+		padding-left: $i-px !important;
+		padding-right: $i-px !important;
+	}
+
+	.py-#{$i} {
+		padding-top: $i-px !important;
+		padding-bottom: $i-px !important;
+	}
+
+	.mx-#{$i} {
+		margin-left: $i-px !important;
+		margin-right: $i-px !important;
+	}
+
+	.my-#{$i} {
+		margin-top: $i-px !important;
+		margin-bottom: $i-px !important;
+	}
+	.gap-#{$i} {
+		gap: $i-px !important;
+	}
+	.gap-column-#{$i} {
+		column-gap: $i-px !important;
+	}
+	.gap-row-#{$i} {
+		row-gap: $i-px !important;
+	}
+
+	.wh-#{$i} {
+		width: $i-px !important;
+	}
+	.ht-#{$i} {
+		height: $i-px !important;
+	}
+
+	// 여백 설정 4배수 -2px
+	.ma-#{$i}h {
+		margin: $ih-px !important;
+	}
+
+	.pa-#{$i}h {
+		padding: $ih-px !important;
+	}
+
+	.mt-#{$i}h {
+		margin-top: $ih-px !important;
+	}
+
+	.mr-#{$i}h {
+		margin-right: $ih-px !important;
+	}
+
+	.mb-#{$i}h {
+		margin-bottom: $ih-px !important;
+	}
+
+	.ml-#{$i}h {
+		margin-left: $ih-px !important;
+	}
+
+	.pt-#{$i}h {
+		padding-top: $ih-px !important;
+	}
+
+	.pr-#{$i}h {
+		padding-right: $ih-px !important;
+	}
+
+	.pb-#{$i}h {
+		padding-bottom: $ih-px !important;
+	}
+
+	.pl-#{$i}h {
+		padding-left: $ih-px !important;
+	}
+
+	.px-#{$i}h {
+		padding-left: $ih-px !important;
+		padding-right: $ih-px !important;
+	}
+
+	.py-#{$i}h {
+		padding-top: $ih-px !important;
+		padding-bottom: $ih-px !important;
+	}
+
+	.mx-#{$i}h {
+		margin-left: $ih-px !important;
+		margin-right: $ih-px !important;
+	}
+
+	.my-#{$i}h {
+		margin-top: $ih-px !important;
+		margin-bottom: $ih-px !important;
+	}
+
+	.icon-w#{$i} {
+		width: $i-px !important;
+		height: $i-px !important;
+		background-size: $i-px $i-px !important;
+	}
+
+	.icon-w#{$i}h {
+		width: $ih-px !important;
+		height: $ih-px !important;
+		background-size: $i-px $i-px !important;
+	}
+
+	.gap-#{$i}h {
+		gap: $ih-px !important;
+	}
+	.gap-column-#{$i}h {
+		column-gap: $ih-px !important;
+	}
+	.gap-row-#{$i}h {
+		row-gap: $ih-px !important;
+	}
+	.wh-#{$i}h {
+		width: $ih-px !important;
+	}
+	.ht-#{$i}h {
+		height: $ih-px !important;
+	}
+}
+
+[class*="wh-"] {
+	display: inline-block;
+}
+
+[class*="icon-w"] {
+	display: inline-block !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-clip: content-box !important;
+	background-origin: content-box !important;
+	background-color: transparent !important;
+	font-size: 0 !important;
+}
+
+@for $i from 1 through 8 {
+	$b-wh: $i * 1px;
+
+	.border-l#{$i} {
+		border-left-width: $b-wh !important;
+	}
+	.border-r#{$i} {
+		border-right-width: $b-wh !important;
+	}
+
+	.border-t#{$i} {
+		border-top-width: $b-wh !important;
+	}
+
+	.border-b#{$i} {
+		border-bottom-width: $b-wh !important;
+	}
+
+	.border-a#{$i} {
+		border-width: $b-wh !important;
+	}
+}
+[class*="border-"] {
+	border-width: 0;
+	border-style: solid;
+}
+@for $i from 1 through 40 {
+	$b-wh: $i * 1px;
+
+	.r-#{$i} {
+		border-radius: $b-wh !important;
+	}
+}
+
+@for $i from 10 through 40 {
+	.fs-#{$i} {
+		font-size: $i * 1px !important;
+	}
+	.lh-#{$i} {
+		line-height: $i * 1px !important;
+	}
+}
+
+@for $i from 1 through 7 {
+	$fw-size: $i * 100;
+
+	.fw-#{$fw-size} {
+		font-weight: $fw-size;
+	}
+}
+
+.l-spacing-04 {
+	letter-spacing: -0.4px;
+}
+
+.l-spacing-08 {
+	letter-spacing: -0.8px;
+}
+
+.fs-0 {
+	font-size: 0 !important;
+}
+
+.ripple_container {
+	z-index: 1;
+	position: absolute;
+	display: block;
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: inherit;
+		height: inherit;
+		border-radius: 50%;
+		transform: scale(0);
+		animation: ripple 3s cubic-bezier(0.02, 0.32, 0, 0.88);
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: inherit;
+		height: inherit;
+		border-radius: 50%;
+		transform: scale(0);
+		background-color: rgba(255, 255, 255, 0.1);
+		animation: ripple 3s cubic-bezier(0.02, 0.32, 0, 0.88) 0.4s;
+	}
+}
+@keyframes ripple {
+	50% {
+		opacity: 0.1;
+	}
+	to {
+		transform: scale(3);
+		opacity: 0;
+	}
+}
+
+.list-dot {
+	li {
+		position: relative;
+		padding-left: 10px;
+		color: #5c5c5c;
+		font-size: 14px;
+		line-height: 20px;
+		& + li {
+			margin-top: 8px;
+		}
+
+		&:after {
+			display: block;
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 2px;
+			height: 2px;
+			background: #5c5c5c;
+			border-radius: 50%;
+			content: "";
+		}
+		a[href*="tel:"] {
+			position: relative;
+			padding-left: 16px;
+			color: inherit;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 16px;
+				height: 16px;
+				margin-top: -8px;
+				background: url(#{$images}/common/phonenumber-filled-16.svg) no-repeat center/100%;
+			}
+		}
+	}
+}
+.title-line {
+	font-size: 22px !important;
+	font-weight: 600;
+	padding-bottom: 24px;
+	border-bottom: 1px solid $black;
+	margin-bottom: 12px;
+	&.large {
+		font-size: 28px !important;
+		font-weight: 600;
+		padding-bottom: 24px;
+		border-bottom: 2px solid $black;
+	}
+}
+
+.status {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: -0.2px;
+	vertical-align: middle;
+	box-sizing: border-box !important;
+	&span {
+		padding: 9px 8px;
+	}
+	&.line {
+		&.primary {
+			color: $primary;
+			border: 1px $primary solid;
+		}
+		&.primary-f4 {
+			color: $primary-f4;
+			border: 1px $primary-f4 solid;
+		}
+		&.gray-24 {
+			border: 1px $gray-24 solid;
+			color: $gray-24;
+		}
+		&.point {
+			border: 1px $point solid;
+			color: $point;
+		}
+	}
+	&.rounded {
+		border-radius: 15px;
+	}
+	&.x-small {
+		height: 20px;
+		padding: 0 8px !important;
+		font-size: 10px;
+		&.rounded {
+			border-radius: 12px;
+		}
+	}
+	&.small {
+		height: 32px;
+		padding: 0 16px !important;
+		font-size: 14px;
+		&.rounded {
+			border-radius: 16px;
+		}
+	}
+}
+
+.pu-table {
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $gray-16;
+	table {
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		th {
+			border-bottom: 1px solid $gray-8;
+			color: #5c5c5c;
+			font-size: 12px;
+			font-weight: 300;
+			letter-spacing: -0.4px;
+			height: 40px;
+			background: #fafafa;
+			border-left: 1px solid #ebebeb;
+			text-align: center;
+			&:first-child {
+				border-left: 0;
+			}
+		}
+		td {
+			border-left: 1px solid #ebebeb;
+			padding: 12px;
+			&:first-child {
+				border-left: 0;
+			}
+			&:last-child {
+				border-right: 0;
+			}
+			em {
+				color: $point;
+				letter-spacing: -0.2px;
+				font-family: $lato;
+			}
+		}
+	}
+}
+
+.clock {
+	position: relative;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border: 1px solid $gray-12;
+	border-radius: 50%;
+	&:after {
+		content: "";
+		position: absolute;
+		background-color: $gray-12;
+		top: 4px;
+		left: calc(50% - 0.5px);
+		height: 12px;
+		width: 1px;
+		border-radius: 1px;
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-animation: grdAiguille 2s linear infinite;
+		animation: grdAiguille 2s linear infinite;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: $gray-12;
+		top: 6px;
+		left: calc(50% - 1px);
+		height: 10px;
+		width: 2px;
+		border-radius: 2px;
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-animation: ptAiguille 12s linear infinite;
+		animation: ptAiguille 12s linear infinite;
+	}
+}
+
+@-webkit-keyframes grdAiguille {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes grdAiguille {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes ptAiguille {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes ptAiguille {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

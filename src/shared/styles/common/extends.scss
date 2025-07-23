@@ -1,0 +1,158 @@
+%clear {
+	&:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+}
+
+%rlaalstn {
+	margin: 1000px;
+}
+
+%imgCenter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+%vertical {
+	text-align: center;
+	white-space: nowrap;
+
+	figure {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		white-space: nowrap;
+
+		&:after {
+			display: inline-block;
+			position: relative;
+			width: 1px;
+			height: 100%;
+			margin-left: -1px;
+			vertical-align: middle;
+			content: "";
+		}
+	}
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&:after {
+		display: inline-block;
+		position: relative;
+		width: 1px;
+		height: 100%;
+		margin-left: -1px;
+		vertical-align: middle;
+		content: "";
+	}
+}
+
+/* 구분선 ex) userid | 2018-04-30 __2 */
+%division {
+	position: relative;
+	margin-right: 20px;
+
+	&:after {
+		display: block;
+		position: absolute;
+		top: 2px;
+		right: -20px;
+		width: 20px;
+		text-align: center;
+		//line-height: 16px; 마이페이지 홍보상품url복사 확인
+		font-size: 12px;
+		color: #ddd;
+		content: "|";
+	}
+}
+
+%blind {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* %icon-drop-down {
+	&::after {
+		display: inline-block;
+		width: vw(20px);
+		height: vw(20px);
+		background: url($icon-drop-down-img) no-repeat center center/vw(20px 20px);
+		content: "";
+	}
+}
+
+%icon-drop-down-large {
+	&::after {
+		display: inline-block;
+		width: vw(24px);
+		height: vw(24px);
+		background: url($icon-large-drop-down-img) no-repeat center center/vw(24px 24px);
+		content: "";
+	}
+} */
+
+%screen-reader {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+%hide-font {
+	font-size: 0;
+}
+
+%hide-font-focusable {
+	&:focus,
+	&:active {
+		font-size: vw(14px);
+	}
+}
+
+%focus-outline {
+	outline: 1px dotted #212121;
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+%image-square-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	&:before {
+		display: block;
+		padding-top: 100%;
+		content: "";
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 100%;
+		max-height: 100%;
+		transform: translate(-50%, -50%);
+	}
+}

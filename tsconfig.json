@@ -23,6 +23,7 @@
 			"@/*": ["./src/*"],
 			"@/app/*": ["app/*"],
 			"@/shared/*": ["shared/*"],
+			"@/shared/styles/*": ["shared/styles/*"],
 			"@/features/*": ["features/*"],
 			"@/widgets/*": ["widgets/*"],
 			"@/widgets/layouts/*": ["widgets/layouts/*"],
