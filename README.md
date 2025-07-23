@@ -20,6 +20,31 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Configuration
+
+Environment specific variables are provided via `.env` files in the project
+root. The following templates are included:
+
+- `.env.local`
+- `.env.dev`
+- `.env.qa`
+- `.env.canary`
+- `.env.prod`
+
+Each file defines values such as `NEXT_PUBLIC_ENVIRONMENT` and
+`NEXT_PUBLIC_BASE_PATH` along with `NEXT_PUBLIC_API_HOST` and
+`NEXT_PUBLIC_ASSETS_HOST`. Adjust these values to match the settings for your
+deployment target. The API and asset hosts mirror the proxy configuration from
+a previous Vue project:
+
+| Environment | `NEXT_PUBLIC_API_HOST` | `NEXT_PUBLIC_ASSETS_HOST` |
+|-------------|-----------------------|---------------------------|
+| local       | `http://localhost:8180` | `https://sqa.pulmuone.app/` |
+| dev         | `https://dev0shop.pulmuone.online` | `https://sqa.pulmuone.app/` |
+| qa          | `https://qashop.pulmuone.online` | `https://sqa.pulmuone.app/` |
+| canary      | `https://canshop.pulmuone.online` | `https://s.pulmuone.app/` |
+| prod        | `https://shop.pulmuone.co.kr` | `https://s.pulmuone.app/` |
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
