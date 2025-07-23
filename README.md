@@ -20,6 +20,21 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Configuration
+
+Environment specific variables are provided via `.env` files in the project
+root. The following templates are included:
+
+- `.env.local`
+- `.env.dev`
+- `.env.qa`
+- `.env.canary`
+- `.env.prod`
+
+Each file defines values such as `NEXT_PUBLIC_ENVIRONMENT` and
+`NEXT_PUBLIC_BASE_PATH`. Adjust these values to match the settings for your
+deployment target.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
