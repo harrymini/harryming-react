@@ -1,0 +1,56 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"parser": "@typescript-eslint/parser", // ← parser 뒤에 /parser 붙여야 정상 동작
+	"plugins": ["react", "@typescript-eslint"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"rules": {
+		"no-console": "off",
+		"no-debugger": "off",
+
+		// 함수 내에 파라미터 재할당 허용
+		"no-param-reassign": [
+			"error",
+			{
+				"props": true,
+				"ignorePropertyModificationsFor": ["state", "acc", "e"]
+			}
+		],
+		"no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+		"no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+		// Prettier 포맷
+		"indent": ["error", 2],
+		// React-specific
+		"react/react-in-jsx-scope": "off", // Next.js/React 17+에서 필요 없음
+		"react/prop-types": "off", // TypeScript 사용 시 불필요
+		"react/jsx-uses-react": "off",
+		"react/jsx-uses-vars": "error"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"overrides": [
+		{
+			"files": ["*.tsx"],
+			"rules": {
+				// TypeScript 파일 내 indent는 위에서 2로 맞췄으니, 별도 설정 필요 없음
+			}
+		}
+	]
+}

@@ -1,5 +1,4 @@
 interface Settings {
-	title: string;
 	brand_list: object;
 	mallName: string;
 	userSession: string;
@@ -7,6 +6,7 @@ interface Settings {
 	layoutOptions: {
 		useHeader: boolean;
 		useFooter: boolean;
+		device: string;
 		title: string;
 		headerType: string;
 		brand: string;
@@ -19,21 +19,21 @@ interface Settings {
 	};
 }
 export const APP_SETTINGS: Settings = {
-        title: "Pulmuone Mall App",
-        brand_list: {
-                ORGA: "orga",
-                PULMUONE: "pulmuone",
-                GREENJUICE: "greenjuice",
-        },
-        mallName: "PulmuoneMall",
-        userSession: "",
-        layout: "default",
-        layoutOptions: {
-                useHeader: true,
-                useFooter: true,
+	brand_list: {
+		ORGA: "orga",
+		PULMUONE: "pulmuone",
+		GREENJUICE: "greenjuice",
+	},
+	mallName: "pulmuone",
+	userSession: "",
+	layout: "default",
+	layoutOptions: {
+		device: "desktop",
+		useHeader: true,
+		useFooter: true,
 		title: "풀무원#",
 		headerType: "sub",
-		brand: "MALL_DIV.PULMUONE",
+		brand: "pulmuone",
 		category: null,
 		color: "black",
 		buttons: [],

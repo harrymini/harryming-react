@@ -1,0 +1,237 @@
+@mixin line($lineCount: 1) {
+    /* 사용법 : @include line(라인수) */
+    @if($lineCount == 1) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    @else {
+        /* autoprefixer: ignore next */
+        -webkit-box-orient: vertical;
+        /* autoprefixer: on */
+        display: block;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        -webkit-line-clamp: $lineCount;
+    }
+}
+
+@mixin checkbox {
+    $unchecked: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $checked: "~@assets/images/pc/common/icon-radio-checked.png";
+    $mobile-uncheck: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $mobile-check: "~@assets/images/pc/common/icon-radio-uncheck.png";
+
+    .fb {
+        &__checkbox {
+            > label {
+                margin-right: 10px;
+                font-size: 0;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+            input[type="checkbox"] {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                background: url($unchecked) no-repeat center center/22px 22px;
+                color: transparent;
+                border-radius: 0;
+                vertical-align: middle;
+                box-sizing: border-box;
+                cursor: pointer;
+                -webkit-box-sizing: border-box;
+                -webkit-appearance: none;
+
+                &:checked {
+                    background: url($checked) no-repeat center center/22px 22px;
+                }
+
+                &::-ms-check {
+                    background-color: inherit;
+                    border-width: 0;
+                    border-color: inherit;
+                    border-radius: inherit;
+                    color: transparent;
+                }
+
+                & + label,
+                & + span {
+                    margin-left: 10px;
+                    color: #000;
+                    font-size: 14px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@mixin radiobox {
+    $unchecked: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $checked: "~@assets/images/pc/common/icon-radio-checked.png";
+    $mobile-uncheck: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $mobile-check: "~@assets/images/pc/common/icon-radio-uncheck.png";
+
+    .fb {
+        &__radio {
+            > label {
+                margin-right: 10px;
+                font-size: 0;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            input[type="radio"] {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                background: url($unchecked)  no-repeat center center/22px 22px;
+                color: transparent;
+                border-radius: 0;
+                vertical-align: middle;
+                box-sizing: border-box;
+                cursor: pointer;
+                -webkit-box-sizing: border-box;
+                -webkit-appearance: none;
+
+                &:checked {
+                    background: url($checked)  no-repeat center center/22px 22px;
+                }
+
+                &::-ms-check {
+                    background-color: inherit;
+                    border-width: 0;
+                    border-color: inherit;
+                    border-radius: inherit;
+                    color: transparent;
+                }
+
+                & + label,
+                & + span {
+                    margin-left: 10px;
+                    color: #000;
+                    font-size: 14px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@mixin guide {
+    .fb {
+        &__guide {
+            h1 {
+                font-size: 24px;
+            }
+
+            a {
+                color: blue;
+            }
+    
+            .guide {
+                h2 {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                }
+    
+                &__wrapper {
+                    padding: 10px;
+                }
+    
+                &__item {
+                    padding: 10px;
+                    border-top: 1px solid #efefef;
+    
+                    &__section {
+                        margin-top: 30px;
+    
+                        &:first-of-type {
+                            margin-top: 0;
+                        }
+                    }
+    
+                    &:first-of-type {
+                        border-top: none;
+                    }
+                }
+    
+                &__table {
+                    em {
+                        color: red;
+                    }
+    
+                    td, th {
+                        border: 1px solid rgba(0,0,0,0.12);
+                        padding: 15px;
+                    }
+                }
+    
+                &__tabs {
+                    padding: 10px 0;
+                }
+    
+                &__result {
+                    padding: 20px;
+                    background: #efefef;
+                }
+    
+                &__validate {
+                    &__error {
+                        color: red;
+                    }
+                }
+
+                &__link {
+                    display: inline-block;
+                    margin-left: 10px;
+                    color: blue;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@mixin soldout {
+    position: relative;
+
+    &:after {
+        content: '일시품절';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $soldout-color;
+        color: $white;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        letter-spacing: -0.4px;
+    }
+}
+@mixin skeleton() {
+    background: $gray-12;
+    animation: skeleton 1.5s ease-in-out infinite;
+}
+@mixin moreArrow ($sizePx : '9px', $color: $black){
+    display: inline-block;
+    width:$sizePx;
+    height:$sizePx;
+    border:1px solid $color;
+    border-width: 1px 1px 0 0;
+    margin-left:6px;
+    transform: translateY(-25%) rotate(45deg);
+    vertical-align: middle;
+}
